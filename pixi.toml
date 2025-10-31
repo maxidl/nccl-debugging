@@ -1,0 +1,21 @@
+[workspace]
+authors = ["maxidl"]
+channels = ["conda-forge"]
+name = "nccl-debugging"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+cuda-toolkit = "12.6.*"
+openmpi = ">=5.0.8,<6"
+
+[pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu126/"]
+
+[pypi-dependencies]
+pip = ">=25.2, <26"
+torch = "==2.6.0"
+numpy = ">=2.3.3, <3"
