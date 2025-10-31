@@ -1,7 +1,9 @@
 # nccl-debugging
 
-## Readings
+## Useful Readings
 * [Networking Chapter from Stas Bekman's Machine Learning Engineering Open Book](https://github.com/stas00/ml-engineering/tree/master/network)
+* Communication Benchmarking section in EleutherAI's [Cookbook](https://github.com/EleutherAI/cookbook/tree/main/benchmarks/communication)
+
 
 ## Env setup
 
