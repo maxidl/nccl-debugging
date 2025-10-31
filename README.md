@@ -7,19 +7,19 @@
 
 ## Env setup
 
-    We assume a pixi env, but this should also work with conda/mamba envs.
-    See `pixi.toml` for a minimal example env with cuda 12.6 and torch 2.6.0, using the torch supplied nccl version.
+We assume a pixi env, but this should also work with conda/mamba envs.
+See `pixi.toml` for a minimal example env with cuda 12.6 and torch 2.6.0, using the torch supplied nccl version.
 
-    Activate your env.
-    ```
-    pixi shell
-    ```
+Activate your env.
+```bash
+pixi shell
+```
 
 ## Test NCCL inside PyTorch
 
 1. Fill in slurm details in `pytorch-nccl-test.sh`
 2. Submit
-    ```
+    ```bash
     sbatch pytorch-nccl-test.sh
     ```
 
@@ -27,7 +27,7 @@
 In addition to the pytorch test, we can run the official tests from NVIDIA.
 
 1. Clone [NVIDIA nccl-tests repo](https://github.com/NVIDIA/nccl-tests).
-    ```
+    ```bash
     git clone https://github.com/NVIDIA/nccl-tests.git
     ```
 
