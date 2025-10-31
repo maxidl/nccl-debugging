@@ -1,6 +1,5 @@
 # nccl-debugging
 
-
 ## Readings
 * [Networking Chapter from Stas Bekman's Machine Learning Engineering Open Book](https://github.com/stas00/ml-engineering/tree/master/network)
 
@@ -14,7 +13,16 @@
     pixi shell
     ```
 
+## Test NCCL inside PyTorch
+
+1. Fill in slurm details in `pytorch-nccl-test.sh`
+2. Submit
+    ```
+    sbatch pytorch-nccl-test.sh
+    ```
+
 ## Official NVIDIA nccl-tests
+In addition to the pytorch test, we can run the official tests from NVIDIA.
 
 1. Clone [NVIDIA nccl-tests repo](https://github.com/NVIDIA/nccl-tests).
     ```
@@ -31,11 +39,3 @@
 3. Run all_reduce performance bench
     See `run_nccl_tests.sh` for an example on how to run nccl-tests with srun.
     
-
-## Test NCCL inside PyTorch
-
-1. Fill in slurm details in `pytorch-nccl-test.sh`
-2. Submit
-    ```
-    sbatch pytorch-nccl-test.sh
-    ```
