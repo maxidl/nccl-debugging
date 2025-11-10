@@ -8,11 +8,19 @@
 ## Env setup
 
 We assume a pixi env, but this should also work with conda/mamba envs.
-See `pixi.toml` for a minimal example env with cuda 12.6 and torch 2.6.0, using the torch supplied nccl version.
+See `pixi.toml` for example envs with different cuda + torch versions, using the torch supplied nccl version.
 
 Activate your env.
 ```bash
-pixi shell
+pixi shell -e torch290cu128 # example for torch 2.9.0 with cuda 12.8
+```
+
+If you have to activate the env within the job, you can add the following at the top of sbatch scripts:
+
+```bash
+# activate pixi env in current shell
+eval "$(pixi shell-hook -e torch290cu128)" # example for torch 2.9.0 with cuda 12.8
+echo "python: $(which python)"
 ```
 
 ## Test NCCL inside PyTorch

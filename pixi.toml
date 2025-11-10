@@ -9,13 +9,75 @@ version = "0.1.0"
 
 [dependencies]
 python = "3.12.*"
-cuda-toolkit = "12.6.*"
+# cuda-toolkit = "12.6.*"
 openmpi = ">=5.0.8,<6"
 
 [pypi-options]
-extra-index-urls = ["https://download.pytorch.org/whl/cu126/"]
+# extra-index-urls = ["https://download.pytorch.org/whl/cu126/"]
 
 [pypi-dependencies]
 pip = ">=25.2, <26"
-torch = "==2.6.0"
+# torch = "==2.6.0"
 numpy = ">=2.3.3, <3"
+
+[feature.torch250cu124.dependencies]
+cuda-toolkit = "12.4.*"
+
+[feature.torch250cu124.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu124/"]
+
+[feature.torch250cu124.pypi-dependencies]
+torch = "==2.5.0"
+
+[feature.torch260cu126.dependencies]
+cuda-toolkit = "12.6.*"
+
+[feature.torch260cu126.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu126/"]
+
+[feature.torch260cu126.pypi-dependencies]
+torch = "==2.6.0"
+
+[feature.torch270cu128.dependencies]
+cuda-toolkit = "12.8.*"
+
+[feature.torch270cu128.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu128/"]
+
+[feature.torch270cu128.pypi-dependencies]
+torch = "==2.7.0"
+
+[feature.torch280cu128.dependencies]
+cuda-toolkit = "12.8.*"
+
+[feature.torch280cu128.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu128/"]
+
+[feature.torch280cu128.pypi-dependencies]
+torch = "==2.8.0"
+
+[feature.torch290cu128.dependencies]
+cuda-toolkit = "12.8.*"
+
+[feature.torch290cu128.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu128/"]
+
+[feature.torch290cu128.pypi-dependencies]
+torch = "==2.9.0"
+
+[feature.torch290cu130.dependencies]
+cuda-toolkit = "13.0.*"
+
+[feature.torch290cu130.pypi-options]
+extra-index-urls = ["https://download.pytorch.org/whl/cu130/"]
+
+[feature.torch290cu130.pypi-dependencies]
+torch = "==2.9.0"
+
+[environments]
+torch250cu124 = ["torch250cu124"]
+torch260cu126 = ["torch260cu126"]
+torch270cu128 = ["torch270cu128"]
+torch280cu128 = ["torch280cu128"]
+torch290cu128 = ["torch290cu128"]
+torch290cu130 = ["torch290cu130"]
